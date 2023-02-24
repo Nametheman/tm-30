@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import styled from 'styled-components';
-import closeBtn from 'assets/icons/plus.png';
-import dosumu from 'assets/images/dosumu.png';
-import { boardMembers } from './About';
+import React from "react";
+import ReactDOM from "react-dom";
+import styled from "styled-components";
+import closeBtn from "assets/icons/plus.png";
+import dosumu from "assets/images/dosumu.png";
+import { boardMembers } from "./About";
 
 // interface props{
 //   userId: string
@@ -38,7 +38,7 @@ const Modal = ({ userId, setShow }: { userId: string; setShow: any }) => {
         </div>
       </Content>
     </Container>,
-    document.getElementById('modal') as HTMLElement
+    document.getElementById("modal") as HTMLElement
   );
 };
 
@@ -106,7 +106,7 @@ const Content = styled.div`
         font-size: 23px;
       }
       .position {
-        font-family: 'Karla', sans-serif;
+        font-family: "Karla", sans-serif;
         font-size: 16px;
         font-weight: 500;
       }
@@ -117,7 +117,7 @@ const Content = styled.div`
       overflow-y: scroll;
 
       p {
-        font-family: 'Karla', sans-serif;
+        font-family: "Karla", sans-serif;
         font-weight: 400;
         letter-spacing: 1.4px;
         line-height: 1.9;
@@ -126,6 +126,33 @@ const Content = styled.div`
 
         span {
           font-weight: 700;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 750px) {
+    width: 95%;
+
+    .userDetails {
+      display: block;
+
+      .userAvi {
+        .userImage {
+          height: 100px;
+        }
+        .name {
+          font-size: 16px;
+        }
+        .position {
+          font-size: 13px;
+        }
+      }
+
+      .userInfoWrapper {
+        margin-top: 20px;
+        p {
+          font-size: 13px;
         }
       }
     }
